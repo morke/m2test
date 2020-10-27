@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+
+            <block class="Morke\CrazyForm\Block\CrazyForm" name="CrazyForm" before="-" template="Morke_CrazyForm::home_form.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="CrazyForm" xsi:type="array">
+                                <item name="component" xsi:type="string">Morke_CrazyForm/js/CrazyForm</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Morke_CrazyForm/CrazyFormTemplate</item>
+                                </item>
+                                <item name="dataScope" xsi:type="string">customCheckoutForm.text_field</item>
+                                <item name="customScope" xsi:type="string">customCheckoutForm</item>
+                                <item name="children" xsi:type="array">
+
+
+           <!--                         <item name="text_field" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                        <item name="displayArea" xsi:type="string">progressBar</item>
+                                        <item name="config" xsi:type="array">
+                                            &lt;!&ndash; customScope is used to group elements within a single form (e.g. they can be validated separately) &ndash;&gt;
+                                            <item name="customScope" xsi:type="string">customCheckoutForm</item>
+                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                            <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                        </item>
+                                        <item name="dataScope" xsi:type="string">customCheckoutForm.text_field</item>
+                                        <item name="label" xsi:type="string" translate="true">Text Field</item>
+                                        <item name="sortOrder" xsi:type="string">1</item>
+                                        <item name="validation" xsi:type="array">
+                                            <item name="required-entry" xsi:type="string">true</item>
+                                        </item>
+                                    </item>-->
+
+                                    <item name="form.input" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                        <item name="displayArea" xsi:type="string">progressBar</item>
+                                        <item name="placeholder" xsi:type="string">asdf</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                            <!--<item name="template" xsi:type="string">ui/form/element/input</item>-->
+                                            <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                        </item>
+                                        <item name="validation" xsi:type="array">
+                                            <item name="required-entry" xsi:type="boolean">true</item>
+                                        </item>
+                                    </item>
+
+<!--                                    <item name="postcode" xsi:type="array">-->
+<!--                                        &lt;!&ndash; post-code field has custom UI component &ndash;&gt;-->
+<!--                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/post-code</item>-->
+
+<!--                                        <item name="validation" xsi:type="array">-->
+<!--                                            <item name="required-entry" xsi:type="boolean">true</item>-->
+<!--                                        </item>-->
+<!--                                    </item>-->
+
+
+<!--                                    <item name="qwe" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                        <item name="displayArea" xsi:type="string">progressBar</item>
+                                        <item name="label" xsi:type="string">asdf</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">ui/form/element/input</item>
+                                            &lt;!&ndash;                                            <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>&ndash;&gt;
+                                        </item>
+                                    </item>-->
+                                </item>
+                            </item>
+
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
