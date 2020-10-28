@@ -3,10 +3,22 @@
 
 <form class="form" id="CrazyForm" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
 
-    <div  class="fieldset address">
+    <fieldset  class="fieldset">
         <!-- ko foreach: getRegion('progressBar') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
         <!--/ko-->
 
-    </div>
+
+    </fieldset>
+    <button type="reset">
+        <span data-bind="i18n: 'Reset'"></span>
+    </button>
+    <button type="button" data-bind="click: onSubmit" class="action">
+        <span data-bind="i18n: 'Submit'"></span>
+    </button>
 </form>
+<script type="text/javascript">
+    var viewModel = {
+        optionsValue: ko.observableArray(['France', 'Germany', 'Spain'])
+    };
+</script>
