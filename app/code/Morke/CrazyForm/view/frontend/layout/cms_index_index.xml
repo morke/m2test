@@ -49,13 +49,16 @@
                                             <item name="label" xsi:type="string" translate="true">Checkbox Field</item>
                                         </item>
                                         <item name="select_field" xsi:type="array">
-                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/select</item>
+                                            <item name="component" xsi:type="string">Morke_CrazyForm/js/SelectCountry</item>
                                             <item name="displayArea" xsi:type="string">progressBar</item>
                                             <item name="config" xsi:type="array">
                                                 <!--customScope is used to group elements within a single form (e.g. they can be validated separately)-->
                                                 <item name="customScope" xsi:type="string">CrazyForm</item>
                                                 <item name="template" xsi:type="string">ui/form/element/select</item>
-
+                                            </item>
+                                            <item name="filterBy" xsi:type="array">
+                                                <item name="target" xsi:type="string"><![CDATA[${ $.provider }:${ $.parentScope }.country_id]]></item>
+                                                <item name="field" xsi:type="string">country_id</item>
                                             </item>
                                         </item>
                                     </item>

@@ -1,11 +1,11 @@
-define(['jquery', 'uiComponent', 'ko' ], function ($, Component, ko) {
+define(['jquery', 'uiComponent', 'ko', ], function ($, Component, ko) {
         'use strict';
         return Component.extend({
 
             initialize: function () {
                 this._super();
                 //this.getCountry();
-                console.log(this);
+                //console.log(this);
             },
 
 
