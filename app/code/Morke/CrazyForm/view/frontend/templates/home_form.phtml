@@ -1,0 +1,23 @@
+<?php
+var_dump($this->jsLayout = isset($data['jsLayout']) && is_array($data['jsLayout']) ? $data['jsLayout'] : []);
+?>
+
+<span>LALALA</span>
+
+<div id="CrazyForm" data-bind="scope:'CrazyForm'" data-mage-init='{"validation":{"rules": {"text_field": {"required":true}}}}'>
+
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#CrazyForm": {
+            "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+
+        }
+    }
+</script>
+
+
+

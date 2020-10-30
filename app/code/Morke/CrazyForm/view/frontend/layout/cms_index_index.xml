@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+
+            <block class="Morke\CrazyForm\Block\CrazyForm" name="CrazyForm" before="-" template="Morke_CrazyForm::home_form.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="types" xsi:type="array">
+                            <item name="form.input" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">ui/form/field</item>
+                                    <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                </item>
+                            </item>
+                        </item>
+
+
+
+                        <item name="components" xsi:type="array">
+                            <item name="CrazyForm" xsi:type="array">
+                                <item name="component" xsi:type="string">Morke_CrazyForm/js/CrazyForm</item>
+                                <item name="dataScope" xsi:type="string">CustomForm</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Morke_CrazyForm/CrazyFormTemplate</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="fields" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                        <item name="displayArea" xsi:type="string">fields</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                            <item name="elementTmpl" xsi:type="string">ui/form/element/input</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
