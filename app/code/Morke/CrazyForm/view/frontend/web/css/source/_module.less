@@ -1,0 +1,86 @@
+//
+//  Common
+//  _____________________________________________
+
+@crazyform-padding:30px;
+
+& when (@media-common = true) {
+    #CrazyForm {
+        margin: 0 auto;
+        border:1px solid @color-gray-light2;
+
+        .legend {
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 500;
+            background: @color-sky-blue1;
+            margin-bottom: @crazyform-padding;
+
+        }
+        .actions-toolbar {
+            margin-top: @crazyform-padding;
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #CrazyForm {
+        max-width: 90%;
+
+        .fields-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: @crazyform-padding @crazyform-padding;
+            padding: 0 @crazyform-padding;
+        }
+        .actions-toolbar {
+            padding: 0 @crazyform-padding;
+
+            > .secondary {
+                float: left;
+            }
+            > .primary {
+                float: right;
+            }
+
+            > .primary .action {
+                width: auto;
+            }
+        }
+    }
+}
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    #CrazyForm {
+        max-width: 60%;
+
+       .fields-grid {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           grid-gap: @crazyform-padding @crazyform-padding;
+           padding: 0 @crazyform-padding*2;
+
+       }
+        .actions-toolbar {
+            margin-top: @crazyform-padding;
+            padding: 0 @crazyform-padding*2;
+
+            .primary {
+                float:right;
+                margin: 0;
+            }
+        }
+    }
+}
+

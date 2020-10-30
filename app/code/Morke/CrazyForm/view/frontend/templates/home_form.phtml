@@ -1,0 +1,16 @@
+<div id="CrazyForm" data-bind="scope:'CrazyForm'">
+    <form class="form" id="CrazyFormForm"  data-mage-init='{"validation": {}}' >
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#CrazyForm": {
+            "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+        }
+    }
+</script>
+
+
+

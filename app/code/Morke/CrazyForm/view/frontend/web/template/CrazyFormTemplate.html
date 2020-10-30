@@ -1,0 +1,26 @@
+
+<fieldset  class="fieldset">
+    <legend class="legend"><span data-bind="i18n: 'Form Title'"></span></legend>
+    <div class="fields-grid">
+        <!-- ko foreach: getRegion('fields') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+    </div>
+    <div class="actions-toolbar">
+        <div class="secondary">
+            <button type="reset" >
+                <span data-bind="i18n: 'Reset'"></span>
+            </button>
+        </div>
+
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">
+                <span data-bind="i18n: 'Submit'"></span>
+            </button>
+        </div>
+
+    </div>
+</fieldset>
+
+
+

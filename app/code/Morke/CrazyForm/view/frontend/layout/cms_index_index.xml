@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+
+            <block class="Morke\CrazyForm\Block\CrazyForm" name="CrazyForm" before="-" template="Morke_CrazyForm::home_form.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+
+                                <item name="CrazyForm" xsi:type="array">
+                                    <!-- Actually, this component is not really need, we can change it for uiComponent -->
+                                    <item name="component" xsi:type="string">Morke_CrazyForm/js/view/CrazyForm</item>
+                                    <item name="dataScope" xsi:type="string">CrazyForm</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="template" xsi:type="string">Morke_CrazyForm/CrazyFormTemplate</item>
+                                    </item>
+
+                                    <item name="children" xsi:type="array">
+                                        <item name="field-name" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="placeholder" xsi:type="string">Name</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Morke_CrazyForm/input-with-fields</item>
+                                            </item>
+                                            <item name="dataScope" xsi:type="string">field-name</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                                <item name="letters-only" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                        <item name="field-email" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="placeholder" xsi:type="string">Email</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Morke_CrazyForm/input-with-fields</item>
+                                            </item>
+                                            <item name="dataScope" xsi:type="string">CrazyForm.field-email</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                                <item name="validate-email" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                        <item name="field-phone" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="placeholder" xsi:type="string">Phone</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Morke_CrazyForm/input-with-fields</item>
+                                            </item>
+                                            <item name="dataScope" xsi:type="string">CrazyForm.field-phone</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                                <item name="validate-digits" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                        <item name="field-address" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="placeholder" xsi:type="string">Address</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Morke_CrazyForm/input-with-fields</item>
+                                            </item>
+                                            <item name="dataScope" xsi:type="string">CrazyForm.field-phone</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                                <item name="validate-street" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                        <item name="field-checkbox" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Ui/js/form/element/boolean</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">ui/form/element/checkbox</item>
+                                            </item>
+                                            <item name="label" xsi:type="string" translate="true">Random Checkbox</item>
+                                            <item name="dataScope" xsi:type="string">CrazyForm.field-checkbox</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                        <item name="field-select" xsi:type="array">
+                                            <item name="component" xsi:type="string">Morke_CrazyForm/js/SelectCountry</item>
+                                            <item name="displayArea" xsi:type="string">fields</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Morke_CrazyForm/select-with-field</item>
+                                            </item>
+                                            <item name="dataScope" xsi:type="string">CrazyForm.field-select</item>
+                                            <item name="validation" xsi:type="array">
+                                                <item name="required-entry" xsi:type="boolean">true</item>
+                                                <item name="validate-select" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
